@@ -1,0 +1,41 @@
+import java.util.*;
+public class Basics{
+    public static int getLargest(int numbers[]){
+        int largest = Integer.MIN_VALUE;;
+        int secondLargest=Integer.MIN_VALUE;
+        
+        for(int i=0;i<numbers.length;i++){
+            if(largest<numbers[i]){
+                largest = numbers[i];
+            }
+            if(numbers[i]<largest && numbers[i]>secondLargest){
+                secondLargest=numbers[i];
+            }
+        }
+         return secondLargest;
+        }
+
+        public static int getSmallest(int numbers[]){
+            int Smallest = Integer.MAX_VALUE;
+            int secondSmallest = Integer.MAX_VALUE;
+            for(int i=0;i<numbers.length;i++){
+            if(Smallest>numbers[i]){
+                Smallest = numbers[i];
+            }
+            if(numbers[i]>Smallest && secondSmallest> numbers[i]){
+                secondSmallest=numbers[i];
+            }
+            }
+            return secondSmallest;
+        }
+       
+    
+    public static void main(String args[]){
+        int numbers[]= {100,2,15,6,3,8};
+        int resultslargest = getLargest(numbers);
+        int resultssmallest =getSmallest(numbers);
+        System.out.println(resultslargest +" " +  resultssmallest);
+        
+
+    }
+}
