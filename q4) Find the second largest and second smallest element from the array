@@ -15,3 +15,41 @@ public class Solution {
       
     }
 }
+
+
+
+***************correction needed below not working ((((((((((
+
+import java.util.*;
+public class Basics{
+    public static int getLargest(int numbers[]){
+        int largest = Integer.MIN_VALUE;;
+        int secondLargest=Integer.MIN_VALUE;
+        
+        for(int i=0;i<numbers.length;i++){
+            if(largest<numbers[i]){
+                secondLargest=largest;
+                largest = numbers[i];
+            }
+           else if(numbers[i]>secondLargest){
+                secondLargest=numbers[i];
+            }
+        }
+    
+            int Smallest = Integer.MAX_VALUE;
+            int secondSmallest = Integer.MAX_VALUE;
+            for(int i=0;i<numbers.length;i++){
+            if(Smallest>numbers[i]){
+                secondSmallest=Smallest;
+                Smallest = numbers[i];
+            }
+            else if(numbers[i]<secondSmallest){
+                secondSmallest=numbers[i];
+            }
+            
+        }
+    
+    }
+       
+     int ans[] ={secondLargest,secondSmallest};
+}
