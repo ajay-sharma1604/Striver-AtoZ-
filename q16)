@@ -1,0 +1,19 @@
+question:-  Left rotate an array by D places
+
+import java.util.ArrayList;
+
+public class Solution {
+	public static ArrayList<Integer> rotateArray(ArrayList<Integer> arr, int k) {
+        
+        for(int i=1;i<=k;i++){
+            int a =arr.get(0);
+            for(int j=1;j<arr.size();j++){
+                arr.set(j-1,arr.get(j));
+            }
+            arr.set(arr.size()-1,a);
+        
+           
+        }
+         return arr;
+    }
+}
